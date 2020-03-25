@@ -1,0 +1,12 @@
+Some git commands:
+-> git init: create a repository inside your current folder
+-> git status: view current state of your project
+-> git branch <new-branch-name>: create a new branch
+-> git checkout <branch-name>: go to that branch
+-> git add <file-name>: add this file to the stage area
+	* git add .: add all changes 
+-> git commit: commit your staged changes
+	*git commit -m "": commit changes with a meassage
+-> git merge <branch-name>: merge changes from another branch to current branch
+-> git log: see details of the commits that were made
+-> git reflog: show the projects history
