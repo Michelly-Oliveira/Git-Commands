@@ -140,3 +140,77 @@ git branch --merged
 - show all branches that have been merged
 
 ---
+
+```bash
+git checkout <file-name>
+```
+
+- remove changes from file before staging
+
+---
+
+```bash
+git commit --ammend
+```
+
+- add a file to previous commit after you already made the commit to the repo
+- commit hash changes, change git history if you pushed to remote
+
+---
+
+```bash
+git commit --amend -m "message"
+```
+
+- change previous commit message
+- hash changes, change git history if you pushed to remote
+
+---
+
+```bash
+git log --stat
+```
+
+- show previous commits and their changes
+
+---
+
+```bash
+git cherry-pick <commit-hash>
+```
+
+- make a new commit based on another commit
+  -it doesn't delete the commit that is used as base
+
+---
+
+```bash
+git reset <flag> <hash>
+```
+
+- return to the point in the repo when you made the commit, all commits made after the one specified with the hash are removed
+
+_flags_
+
+- --soft: delete commits after the one used on the hash, but keep the changes on the staging area
+
+- default(noflag): delete commits after the one used as the hash, keep the changes on the working directory but not on the staging area
+
+- --hard: delete commits after the one used as the hash, all tracked files go back to the state they were in on the hash commit(lose changes), untracked files stay on the working directory - not changed
+
+---
+
+```bash
+git clean -df
+```
+
+- remove untracked directories and files from working directory
+
+---
+
+```bash
+git revert <hash>
+```
+
+- creates a new commit that completely reverts(undo) the specified commit
+- 'unmake' commits without changing the git history
